@@ -309,8 +309,7 @@ service /inbound on mockListener {
             createdAt: ""
         };
         check caller->respond(response);
-        return;
-        
+        return;      
     }
 
     # Deletes an inbound domain.
@@ -360,7 +359,6 @@ service /inbound on mockListener {
         check caller->respond(response);
         return;
     }
-    
 }
 
 # Handles requests related to IP addresses.
@@ -396,8 +394,6 @@ service /ips on mockListener {
         check caller->respond(response);
         return;
     }
-
-    
 }
 
 # Initializes the mock service.
