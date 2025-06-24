@@ -68,25 +68,24 @@ To use the `Mailchimp Transactional` connector in your Ballerina application, up
 Import the `mailchimp.transactional` module.
 
 ```ballerina
-import ballerinax/mailchimp.transactional;
+import ballerinax/mailchimp.'transactional;
 ```
 ### Step 2: Configure the API Key
 
 1. Create a `Config.toml` file and add your Mandrill API key obtained from the setup process:
 
 ```bash
-apiKey = "<Access Token>"
+key = "<Access Token>"
 ```
 
 2. Declare the key as a configurable variable and create a `mailchimp.transactional:Client` instance:
 
 ```ballerina
-configurable string apiKey = ?;
+configurable string key = ?;
 
-final mailchimp.transactional:Client client = check new({
-    apiKey: apiKey
-});
+mailchimp:ConnectionConfig conConfig = check {};
 
+final mailchimp:Client mailchimp = check new(conConfig,serviceUrl);
 ```
 
 ### Step 3: Send a transactional email
@@ -94,6 +93,28 @@ final mailchimp.transactional:Client client = check new({
 Here’s how you can send a simple transactional email using the connector:
 
 ```ballerina
+public function main() returns error? {
+    mailchimp:MessagesSendBody payload = {
+        'key: key,
+        message: {
+            fromEmail: "noreply@yourdomain.com",
+            to: [{ email: "customer@example.com"}],
+            subject: "Your Order Confirmation",
+            text: "Text",
+            autoText: true
+            
+        }
+    };
+    mailchimp:InlineResponse20028[] sendResponse = check mailchimp->/messages/send.post(payload);
+    if sendResponse.length() == 0 {
+        io:println("No responses received.");
+        return error("Empty response from Mailchimp API");
+    }
+
+    foreach var response in sendResponse {
+        io:println("Email sent successfully: ", response.toBalString());
+    }
+}
 
 ```
 
