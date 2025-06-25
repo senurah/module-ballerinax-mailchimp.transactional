@@ -21,9 +21,7 @@ configurable boolean useMock = ?;
 string mockServiceUrl = "http://localhost:9090";
 string mandrillServiceUrl = "https://mandrillapp.com/api/1.0";
 string serviceUrl = useMock ? mockServiceUrl : mandrillServiceUrl;
-
 ConnectionConfig config = check {};
-
 Client mailchimp = check new (config, serviceUrl);
 
 @test:Config {

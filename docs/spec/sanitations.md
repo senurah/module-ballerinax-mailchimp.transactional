@@ -1,4 +1,4 @@
-_Author_:  senurah \
+_Author_:  @senurah \
 _Created_: 16/06/25 \
 _Updated_: 16/06/25 \
 _Edition_: Swan Lake
@@ -19,6 +19,6 @@ These changes are done in order to improve the overall usability, and as workaro
 The following command was used to generate the Ballerina client from the OpenAPI specification. The command should be executed from the repository root directory.
 
 ```bash
-# TODO: Add OpenAPI CLI command used to generate the client
+bal openapi -i docs/spec/openapi.json --mode client --license docs/license.txt -o ballerina
 ```
 Note: The license year is hardcoded to 2024, change if necessary.
