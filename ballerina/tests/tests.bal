@@ -17,10 +17,10 @@
 import ballerina/test;
 
 configurable string MAILCHIMP_API_KEY = ?;
-configurable boolean useMock = ?;
+configurable boolean isLiveServer = ?;
 string mockServiceUrl = "http://localhost:9090";
 string mandrillServiceUrl = "https://mandrillapp.com/api/1.0";
-string serviceUrl = useMock ? mockServiceUrl : mandrillServiceUrl;
+string serviceUrl = isLiveServer ? mandrillServiceUrl : mockServiceUrl;
 ConnectionConfig config = check {};
 Client mailchimp = check new (config, serviceUrl);
 

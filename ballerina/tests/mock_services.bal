@@ -255,7 +255,7 @@ service on mockListener {
 }
 
 # Initializes the mock service.
-# 
+#
 # + return - Returns an error if the mock service initialization fails.
 public function initMockService() returns error? {
     log:printInfo("Starting mock service");

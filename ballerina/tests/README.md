@@ -21,24 +21,24 @@ There are two test environments for running the Mailchimp Transactional API conn
 
 ## Running Tests with the Mock Server
 
-To run the tests using the mock server (default environment), ensure the `useMock` configuration is set to `true` or left unset in the `Config.toml` file located in the `tests` directory.
+To run the tests using the mock server (default environment), ensure the `isLiveServer` configuration is set to `false` or left unset in the `Config.toml` file located in the `tests` directory.
 
 ### Option 1: Using `Config.toml` File
 
 Create a `Config.toml` file in the `tests` directory with the following content:
 
 ```toml
-useMock = true
+isLiveServer = false
 ```
 ### Option 2: Using Environment Variables
 
 On Linux/macOS:
 ```bash
-export useMock=true
+export isLiveServer = false
 ```
 On Windows:
 ```bash
-setx useMock true
+setx isLiveServer = false
 ```
 Then, run the following command to execute the tests:
 ```bash
@@ -58,18 +58,18 @@ To run tests against the actual Mailchimp Transactional API, you must provide a 
 Create a ```Config.toml``` file in the ```tests``` directory with the following:
 
 ```bash
-useMock = false
+isLiveServer = true
 MAILCHIMP_API_KEY = "<your-mandrill-api-key>"
 ```
 ### Option 2: Using Environment Variables
 
 On Linux/macOS:
 ```bash
-export useMock=true
+export isLiveServer = true
 ```
 On Windows:
 ```bash
-setx useMock true
+setx isLiveServer true
 ```
 Then, run the following command to execute the tests:
 ```bash
