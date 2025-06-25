@@ -5,7 +5,7 @@ name = "mailchimp.transactional"
 version = "1.0.0"
 license = ["Apache-2.0"]
 authors = ["Ballerina"]
-keywords = []
+keywords = ["mailchimp"]
 icon = "icon.png"
 repository = "https://github.com/ballerina-platform/module-ballerinax-mailchimp.transactional"
 
