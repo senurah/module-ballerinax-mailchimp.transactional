@@ -120,6 +120,6 @@ bal run
 
 ## Examples
 
-The `MailChimp Transactional Emails` connector provides practical examples illustrating usage in various scenarios. Explore these [examples](https://github.com/module-ballerinax-mailchimp.transactional/tree/main/examples/), covering the following use cases:
+The `MailChimp Transactional Emails` connector provides practical examples illustrating usage in various scenarios. Explore these [examples](../examples/README.md), covering the following use cases:
 
 [//]: # (TODO: Add examples)
