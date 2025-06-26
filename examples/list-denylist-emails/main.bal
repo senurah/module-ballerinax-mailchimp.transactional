@@ -2,14 +2,12 @@ import ballerina/io;
 import ballerinax/mailchimp.'transactional as mailchimp;
 
 configurable string key = ?;
-string serviceUrl = "https://mandrillapp.com/api/1.0";
-mailchimp:ConnectionConfig conConfig = check {};
+const string SERVER_URL = "https://mandrillapp.com/api/1.0";
+final mailchimp:Client mailchimp = check new ({}, SERVER_URL);
 
-final mailchimp:Client mailchimp = check new(conConfig,serviceUrl);
-
-public function main() returns error?{
+public function main() returns error? {
     mailchimp:RejectsAddBody addPayload = {
-        'key:key,
+        'key: key,
         email: "test@example.com",
         comment: "Testing denylist functionality"
     };
@@ -20,7 +18,7 @@ public function main() returns error?{
     }
 
     mailchimp:RejectsListBody listPayload = {
-        'key:key,
+        'key: key,
         includeExpired: true,
         email: "test@example.com"
     };
@@ -33,7 +31,7 @@ public function main() returns error?{
 
     io:println("List Response: ", listResponse.toString());
     foreach mailchimp:InlineResponse20041 entry in listResponse {
-        io:println("Denied Email :",entry.email.toString());
+        io:println("Denied Email :", entry.email.toString());
         io:println("Reason :", entry.reason.toString());
     }
 }
