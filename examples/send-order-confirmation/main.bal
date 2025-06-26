@@ -12,11 +12,10 @@ public function main() returns error? {
         'key: key,
         message: {
             fromEmail: "noreply@yourdomain.com",
-            to: [{ email: "customer@example.com"}],
+            to: [{ email: "email@example.com"}],
             subject: "Your Order Confirmation",
             text: "Hi there,\n\nThank you for your order. Your package will be shipped soon!",
-            autoText: true
-            
+            autoText: true            
         }
     };
     mailchimp:InlineResponse20028[] sendResponse = check mailchimp->/messages/send.post(payload);
@@ -28,5 +27,16 @@ public function main() returns error? {
     foreach var response in sendResponse {
         io:println("Email sent successfully: ", response.toBalString());
     }
+
+    string? messageId = sendResponse[0].id;
+    io:println("The message ID",messageId);
+
+    mailchimp:MessagesInfoBody infoPayload = {
+        'key:key,
+        id: messageId.toString()
+    };
+
+    mailchimp:InlineResponse20032 messageInfo = check mailchimp->/messages/info.post(infoPayload);
+    io:println("Messages Info : ",messageInfo);
 }
 
