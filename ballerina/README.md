@@ -85,10 +85,9 @@ key = "<Access Token>"
 
 ```ballerina
 configurable string key = ?;
+const string SERVER_URL = "server-url";
 
-mailchimp:ConnectionConfig conConfig = check {};
-
-final mailchimp:Client mailchimp = check new(conConfig,serviceUrl);
+final mailchimp:Client mailchimp = check new ({}, SERVER_URL);
 ```
 
 ### Step 3: Send a transactional email
