@@ -87,6 +87,3 @@ To run only a specific test group:
 bal test --groups mock
 bal test --groups live
 ```
-
-
-

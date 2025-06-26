@@ -213,4 +213,3 @@ function testListIps() returns error? {
     test:assertFalse(result !is InlineResponse20017[], msg = "Failed to list IPs");
     test:assertTrue(result.length() >= 0, msg = "Unexpected IP list format");
 }
-

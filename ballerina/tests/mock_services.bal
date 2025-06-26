@@ -253,5 +253,3 @@ service on mockListener {
         check caller->respond(response);
     }
 }
-
-
