@@ -180,7 +180,6 @@ service on mockListener {
             id: "",
             url: "https://example.com/webhook"
         };
-
     }
 
     # Lists all IP addresses.
