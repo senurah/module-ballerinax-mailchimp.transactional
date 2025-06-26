@@ -24,38 +24,47 @@ To use the Mailchimp Transactional Email connector, you need to have a Mailchimp
 
 2. Once signed in, click on your profile icon in the bottom-left corner to access the account menu.
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/mailchimp_dashboard.png" alt="Mailchimp Dashboard" style="width: 70%;"/>
+    <img src=<img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/mailchimp_menu.png" alt="Mailchimp Profile Menu" style="width: 20%;"/>  -->
     <img src="docs/setup/resources/mailchimp_dashboard.png" alt="Mailchimp Dashboard" style="width: 70%;"/>
-    <img src="docs/setup/resources/mailchimp_menu.png" alt="Mail chimp Profile Menu" style="width:20%">
+    <img src="docs/setup/resources/mailchimp_menu.png" alt="Mailchimp Profile Menu" style="width:20%">
 
 
 ### Step 2: Enable Transactional Email
 
 1. In the menu, go to **Billing**.
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/mailchimp_billing.png" alt="Mailchimp Billing section" style="width:70%"> -->
     <img src="docs/setup/resources/mailchimp_billing.png" alt="Mailchimp Billing section" style="width:70%">
 
 2. Under **Monthly plans or credits**, select the **Transactional Email** plan (you can start with the demo plan).
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/set-up.png" alt="Transactional Email Plan" style="width: 70%;"/> -->
     <img src="docs/setup/resources/set-up.png" alt="Transactional Email Plan" style="width: 70%;"/>
 
 ### Step 3: Generate a Mandrill API Key
 
 1. After enabling the transactional email feature, navigate to the **Extras** section and click on **API keys**.
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/mailchimp_menu_extra.png" alt="Mailchimp extra section" style="width:70%"> -->
     <img src="docs/setup/resources/mailchimp_menu_extra.png" alt="Mailchimp extra section" style="width:70%">
 
 2. Choose **Create Mandrill API Key** (not the regular API key). You will be redirected to the [MandrillApp Dashboard](https://mandrillapp.com/).
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/api-key.png" alt="Mailchimp API selection" style="width: 70%;"/> -->
     <img src="docs/setup/resources/api-key.png" alt="Mailchimp API selection" style="width: 70%;"/>
+
 
 3. In the MandrillApp dashboard, click **Add API Key** to generate your key.
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/mandril-api-key.png" alt="Mandril API key" style="width:70%"> -->
     <img src="docs/setup/resources/mandril-api-key.png" alt="Mandril API key" style="width:70%">
+
 
 4. Copy the generated API key. You will need this to authenticate your connector.
 
+    <!-- <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp/refs/heads/main/docs/setup/resources/validate.png" alt="Create Mandrill API Key" style="width: 70%;"/> -->
     <img src="docs/setup/resources/validate.png" alt="Create Mandrill API Key" style="width: 70%;"/>
-
 
 ## Quickstart
 
