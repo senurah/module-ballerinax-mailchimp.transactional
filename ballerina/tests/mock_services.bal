@@ -26,13 +26,11 @@ service on mockListener {
     # + caller - Represents the client making the request.
     # + req - The HTTP request received by the service.
     # + return - Returns an error if the operation fails.
-    resource function post allowlists/add(http:Caller caller, http:Request req) returns error? {
-        log:printInfo("Received a request to add to allowlist");
-        InlineResponse200 response = {
+    resource function post allowlists/add() returns InlineResponse200|error {
+        return {
             email: "test@example.com",
             added: true
         };
-        check caller->respond(response);
     }
 
     # Lists all emails in the allowlist.
