@@ -30,7 +30,7 @@ Client mailchimp = check new ({}, serviceUrl);
 function testAddToAllowlist() returns error? {
     AllowlistsAddBody payload = {
         email: "test@example.com",
-        key: key,
+        key,
         comment: "Adding to allowlist for testing"
     };
     InlineResponse200 result = check mailchimp->/allowlists/add.post(payload);
@@ -43,7 +43,7 @@ function testAddToAllowlist() returns error? {
 }
 function testListAllowlist() returns error? {
     AllowlistsListBody payload = {
-        key: key
+        key
     };
     InlineResponse2001[] result = check mailchimp->/allowlists/list.post(payload);
     test:assertFalse(result !is InlineResponse2001[], msg = "Failed to list allowlist");
@@ -56,7 +56,7 @@ function testListAllowlist() returns error? {
 function testDeleteFromAllowlist() returns error? {
     AllowlistsDeleteBody payload = {
         email: "test@example.com",
-        key: key
+        key
     };
     InlineResponse2002 result = check mailchimp->/allowlists/delete.post(payload);
     test:assertFalse(result !is InlineResponse2002, msg = "Failed to delete email from allowlist");
@@ -68,7 +68,7 @@ function testDeleteFromAllowlist() returns error? {
 }
 function testListExports() returns error? {
     ExportsListBody payload = {
-        key: key
+        key
     };
     InlineResponse2004[] result = check mailchimp->/exports/list.post(payload);
     test:assertFalse(result !is InlineResponse2004[], msg = "Failed to list exports");
@@ -80,7 +80,7 @@ function testListExports() returns error? {
 }
 function testExportAllowlist() returns error? {
     ExportsRejectsBody payload = {
-        key: key
+        key
     };
     InlineResponse2006 result = check mailchimp->/exports/allowlist.post(payload);
     test:assertFalse(result !is InlineResponse2006, msg = "Failed to export allowlist");
@@ -92,7 +92,7 @@ function testExportAllowlist() returns error? {
 }
 function testExportDenylist() returns error? {
     ExportsRejectsBody payload = {
-        key: key
+        key
     };
     InlineResponse2005 result = check mailchimp->/exports/rejects.post(payload);
     test:assertFalse(result !is InlineResponse2005, msg = "Failed to export denylist");
@@ -104,7 +104,7 @@ function testExportDenylist() returns error? {
 }
 function testExportWhitelist() returns error? {
     ExportsRejectsBody payload = {
-        key: key
+        key
     };
     InlineResponse2006 result = check mailchimp->/exports/whitelist.post(payload);
     test:assertFalse(result !is InlineResponse2006, msg = "Failed to export whitelist");
@@ -116,7 +116,7 @@ function testExportWhitelist() returns error? {
 }
 function testExportActivity() returns error? {
     ExportsActivityBody payload = {
-        key: key
+        key
     };
     InlineResponse2007 result = check mailchimp->/exports/activity.post(payload);
     test:assertFalse(result !is InlineResponse2007, msg = "Failed to export activity");
@@ -128,7 +128,7 @@ function testExportActivity() returns error? {
 }
 function testListInboundDomains() returns error? {
     ExportsListBody payload = {
-        key: key
+        key
     };
     InlineResponse2008[] result = check mailchimp->/inbound/domains.post(payload);
     test:assertFalse(result !is InlineResponse2008[], msg = "Failed to list inbound domains");
@@ -140,7 +140,7 @@ function testListInboundDomains() returns error? {
 }
 function testAddInboundDomain() returns error? {
     InboundAddDomainBody payload = {
-        key: key,
+        key,
         domain: "example.com"
     };
     InlineResponse2009 result = check mailchimp->/inbound/add\-domain.post(payload);
@@ -153,7 +153,7 @@ function testAddInboundDomain() returns error? {
 }
 function testCheckInboundDomain() returns error? {
     InboundCheckDomainBody payload = {
-        key: key,
+        key,
         domain: "example.com"
     };
     InlineResponse20010 result = check mailchimp->/inbound/check\-domain.post(payload);
@@ -166,7 +166,7 @@ function testCheckInboundDomain() returns error? {
 }
 function testDeleteInboundDomain() returns error? {
     InboundCheckDomainBody payload = {
-        key: key,
+        key,
         domain: "example.com"
     };
     InlineResponse20011 result = check mailchimp->/inbound/delete\-domain.post(payload);
@@ -179,7 +179,7 @@ function testDeleteInboundDomain() returns error? {
 }
 function testListMailboxRoutes() returns error? {
     InboundRoutesBody payload = {
-        key: key,
+        key,
         domain: "example.com"
     };
     InlineResponse20012[] result = check mailchimp->/inbound/routes.post(payload);
@@ -192,7 +192,7 @@ function testListMailboxRoutes() returns error? {
 }
 function testAddMailboxRoute() returns error? {
     InboundAddRouteBody payload = {
-        key: key,
+        key,
         domain: "example.com",
         pattern: ".*",
         url: "https://example.com/webhook"
@@ -207,7 +207,7 @@ function testAddMailboxRoute() returns error? {
 }
 function testListIps() returns error? {
     ExportsListBody payload = {
-        key: key
+        key
     };
     InlineResponse20017[] result = check mailchimp->/ips/list.post(payload);
     test:assertFalse(result !is InlineResponse20017[], msg = "Failed to list IPs");
