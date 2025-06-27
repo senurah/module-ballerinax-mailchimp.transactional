@@ -1,0 +1,14 @@
+[package]
+org = "wo2"
+name = "webhook_lifecycle"
+version = "0.1.0"
+distribution = "2201.12.6"
+
+[[dependency]]
+org = "ballerinax"
+name = "mailchimp.transactional"
+version = "1.0.0"
+repository="local"
+
+[build-options]
+observabilityIncluded = true
