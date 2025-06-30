@@ -16,8 +16,8 @@
 
 import ballerina/test;
 
-configurable string key = ?;
-configurable boolean isLiveServer = ?;
+configurable string key = "test";
+configurable boolean isLiveServer = false;
 
 const string MOCK_SERVER_URL = "http://localhost:9090";
 const string LIVE_SERVER_URL = "https://mandrillapp.com/api/1.0";

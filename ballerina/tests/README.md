@@ -58,17 +58,19 @@ To run tests against the actual Mailchimp Transactional API, you must provide a 
 Create a ```Config.toml``` file in the ```tests``` directory with the following:
 
 ```bash
+key = "<your-mandrill-api-key>"
 isLiveServer = true
-MAILCHIMP_API_KEY = "<your-mandrill-api-key>"
 ```
 ### Option 2: Using Environment Variables
 
 On Linux/macOS:
 ```bash
+export key = "<your-mandrill-api-key>"
 export isLiveServer = true
 ```
 On Windows:
 ```bash
+setx key "<your-mandrill-api-key>"
 setx isLiveServer true
 ```
 Then, run the following command to execute the tests:
