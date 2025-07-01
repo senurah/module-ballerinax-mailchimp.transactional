@@ -1,4 +1,4 @@
-# Transactional Template Flow Example
+# Transactional template flow example
 
 This example demonstrates how to manage the lifecycle of a transactional email template using the Mailchimp Transactional API. It covers:
 
@@ -14,7 +14,7 @@ This workflow is useful in scenarios where dynamic, transactional email template
 
 ## Prerequisites
 
-### 1. Mailchimp Transactional API Key
+### 1. Mailchimp Transactional API key
 
 To use this example, you need a valid **Mailchimp Transactional (Mandrill) API key**.
 
@@ -36,7 +36,7 @@ Execute the following command to run the example:
 bal run
 ```
 
-## Example Output
+## Example output
 
 The program will:
 

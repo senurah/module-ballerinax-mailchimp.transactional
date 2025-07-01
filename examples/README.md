@@ -7,7 +7,7 @@ The `ballerinax/mailchimp.transactional` connector provides practical examples i
 
 ## Prerequisites
 
-### 1. Mailchimp Transactional API Key
+### 1. Mailchimp Transactional API key
 
 To use this example, you need a valid **Mailchimp Transactional (Mandrill) API key**.
 

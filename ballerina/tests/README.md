@@ -1,4 +1,4 @@
-# Running Tests
+# Running tests
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ To generate the API key, follow the [Setup Guide](../README.md#setup-guide) prov
 
 ---
 
-## Test Environments
+## Test environments
 
 There are two test environments for running the Mailchimp Transactional API connector tests. By default, tests run against the **mock server**. You can also run tests against the **live Mailchimp Transactional API**.
 
@@ -19,18 +19,18 @@ There are two test environments for running the Mailchimp Transactional API conn
 
 ---
 
-## Running Tests with the Mock Server
+## Running tests with the mock server
 
 To run the tests using the mock server (default environment), ensure the `isLiveServer` configuration is set to `false` or left unset in the `Config.toml` file located in the `tests` directory.
 
-### Option 1: Using `Config.toml` File
+### Option 1: Using `Config.toml` file
 
 Create a `Config.toml` file in the `tests` directory with the following content:
 
 ```toml
 isLiveServer = false
 ```
-### Option 2: Using Environment Variables
+### Option 2: Using environment variables
 
 On Linux/macOS:
 ```bash
@@ -49,11 +49,11 @@ You can also explicitly run only mock group tests:
 bal test --groups mock
 ```
 
-## Running Tests Against Live Mailchimp Transactional API
+## Running tests against live mailchimp transactional API
 
 To run tests against the actual Mailchimp Transactional API, you must provide a valid Mandrill API key.
 
-### Option 1: Using ```Config.toml``` File
+### Option 1: Using ```Config.toml``` file
 
 Create a ```Config.toml``` file in the ```tests``` directory with the following:
 
@@ -61,7 +61,7 @@ Create a ```Config.toml``` file in the ```tests``` directory with the following:
 key = "<your-mandrill-api-key>"
 isLiveServer = true
 ```
-### Option 2: Using Environment Variables
+### Option 2: Using environment variables
 
 On Linux/macOS:
 ```bash
@@ -78,7 +78,7 @@ Then, run the following command to execute the tests:
 bal test --groups live
 ```
 
-## Running All Tests
+## Running all tests
 
 To run all test groups (mock by default):
 ```bash
