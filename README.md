@@ -43,7 +43,7 @@ To use the Mailchimp Transactional Email connector, you need to have a Mailchimp
 
     ![Mailchimp API Selection](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-create-api-key.png)
 
-3. In the MandrillApp dashboard, click **+Add API Key** to generate your key.
+3. In the MandrillApp dashboard, click **+ Add API Key** to generate your key.
 
     ![Mandrill API Key](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-create-mandril-key.png)
 
