@@ -29,7 +29,7 @@ To use the Mailchimp Transactional Email connector, you need to have a Mailchimp
 
     ![Mailchimp Billing Section](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-billing.png)
 
-2. Under **Monthly plans or credits**, select the **Transactional email** plan (you can start with the demo plan).
+2. Under **Monthly plans or credits**, select the **Transactional Email Plan** (you can start with the demo plan).
 
     ![Transactional Email Plan](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-transactional-setup.png)
 
