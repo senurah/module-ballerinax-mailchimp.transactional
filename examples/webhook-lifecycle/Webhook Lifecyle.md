@@ -19,7 +19,7 @@ You need a valid **Mailchimp Transactional (Mandrill) API key**.
 
 Follow the steps in the [Mailchimp Transactional API Setup Guide](https://github.com/ballerina-platform/module-ballerinax-mailchimp.transactional/tree/main/README.md#setup-guide) to obtain the key.
 
-### 2. Webhook receiver (Optional for Testing)
+### 2. Webhook receiver (Optional for testing)
 
 To test webhook creation with a real endpoint, you can use services like:
 

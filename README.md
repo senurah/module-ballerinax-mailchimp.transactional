@@ -18,7 +18,7 @@ To use the Mailchimp Transactional Email connector, you need to have a Mailchimp
 
 1. Go to the [Mailchimp Sign Up Page](https://login.mailchimp.com/signup/) and create a Mailchimp account.
 
-2. Once signed in, click on your profile icon in the bottom-left corner to access the account menu.
+2. Once signed in, click on your profile icon in the top-right corner to access the account menu.
 
     ![Mailchimp Dashboard](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-dashboard.png)
     ![Mailchimp Profile Menu](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-menu.png)
@@ -39,11 +39,11 @@ To use the Mailchimp Transactional Email connector, you need to have a Mailchimp
 
     ![Mailchimp Extra Section](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-api-key-menu.png)
 
-2. Choose **Create Mandrill API key** (not the regular API key). You will be redirected to the [MandrillApp Dashboard](https://mandrillapp.com/).
+2. Choose **Create A Mandrill API Key** (not the regular API key). You will be redirected to the [MandrillApp Dashboard](https://mandrillapp.com/).
 
     ![Mailchimp API Selection](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-create-api-key.png)
 
-3. In the MandrillApp dashboard, click **Add API key** to generate your key.
+3. In the MandrillApp dashboard, click **+Add API Key** to generate your key.
 
     ![Mandrill API Key](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.transactional/refs/heads/main/docs/setup/resources/mailchimp-create-mandril-key.png)
 
